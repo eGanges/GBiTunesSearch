@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=">
+            <title>Ganges/Barclays iTunes Search</title>
+            </head>
+    <body>
+        <h2 align="center">Ganges/Barclays iTunes Search v.<!-- ##appVersion## --></h2>
+        <br />
+        <br />
+
+        <form action="gbis://doSearch.iOS" method="get">
+            
+            <div class="gbisContainer">
+                Search Term:<br />
+                <input type="text" name="term">
+                <br />
+                <br />
+                Entity Filter:<br />
+                <select id="entity" name="entity">
+                    <!-- ##entityOptions## -->
+                </select>
+                <br />
+                <br />
+                <input type="submit">
+            </div>
+        </form>
+    </body>
+</html>

@@ -7,16 +7,30 @@
 //
 
 #import "AppDelegate.h"
+#import "gbisResultsTableViewController.h"
+#import "gbisDetailViewController.h"
 
-@interface AppDelegate ()
+
+
+
+@interface AppDelegate () <UISplitViewControllerDelegate>
 
 @end
 
 @implementation AppDelegate
-
+@synthesize searchIsAborted, searchIsAbortedMessage, searchResultSet, searchResultSetItemDict, searchPlaceholderImage60x60, searchPlaceholderImage100x100, searchIsLoadedFromCache;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.searchIsAborted = false;
+    self.searchIsAbortedMessage = nil;
+    self.searchIsLoadedFromCache = false;
+    self.searchResultSet = nil;
+    self.searchResultSetItemDict = nil;
+    
+    self.searchPlaceholderImage60x60 = [UIImage imageNamed:@"DownloadingPlaceHolderImage60x60.png"];
+    self.searchPlaceholderImage100x100 = [UIImage imageNamed:@"DownloadingPlaceHolderImage100x100.png"];
     return YES;
 }
 
@@ -47,6 +61,32 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
+}
+
+#pragma mark -
+#pragma mark === UISplitViewControllerDelegate ===
+#pragma mark -
+
+// When transitioning to a collapsed interface if our secondary view controller is the detail view
+// controller navigation hierarchy and it does not have a DetailView to display (which is the case on
+// initial launch) we discard and show the master view controller.
+
+- (BOOL)splitViewController:(UISplitViewController *)splitViewController
+collapseSecondaryViewController:(UIViewController *)secondaryViewController
+  ontoPrimaryViewController:(UIViewController *)primaryViewController
+{
+    if ([secondaryViewController isKindOfClass:[UINavigationController class]]
+        && [[(UINavigationController *)secondaryViewController topViewController] isKindOfClass:[gbisDetailViewController class]]
+        && ([(gbisDetailViewController *)[(UINavigationController *)secondaryViewController topViewController] resultItem] == nil))
+    {
+        // Return YES to indicate that we have handled the collapse by doing nothing
+        // the secondary controller will be discarded.
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
 }
 
 

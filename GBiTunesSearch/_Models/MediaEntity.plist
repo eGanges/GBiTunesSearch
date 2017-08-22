@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>movie</key>
+	<array>
+		<string>movie</string>
+		<string>movieArtist</string>
+	</array>
+	<key>podcast</key>
+	<array>
+		<string>podcast</string>
+		<string>podcastAuthor</string>
+	</array>
+	<key>music</key>
+	<array>
+		<string>musicArtist</string>
+		<string>musicTrack</string>
+		<string>album</string>
+		<string>musicVideo</string>
+		<string>mix</string>
+		<string>song</string>
+	</array>
+	<key>musicVideo</key>
+	<array>
+		<string>musicArtist</string>
+		<string>musicVideo</string>
+	</array>
+	<key>audiobook</key>
+	<array>
+		<string>audiobook</string>
+		<string>audiobookAuthor</string>
+	</array>
+	<key>shortFilm</key>
+	<array>
+		<string>shortFilm</string>
+		<string>shortFilmAuthor</string>
+	</array>
+	<key>tvShow</key>
+	<array>
+		<string>tvEpisode</string>
+		<string>tvSeason</string>
+	</array>
+	<key>software</key>
+	<array>
+		<string>software</string>
+		<string>iPadSoftware</string>
+		<string>macSoftware</string>
+	</array>
+	<key>ebook</key>
+	<array>
+		<string>ebook</string>
+	</array>
+	<key>all</key>
+	<array>
+		<string>movie</string>
+		<string>album</string>
+		<string>allArtist</string>
+		<string>podcast</string>
+		<string>musicVideo</string>
+		<string>mix</string>
+		<string>audiobook</string>
+		<string>tvSeason</string>
+		<string>allTrack</string>
+	</array>
+</dict>
+</plist>

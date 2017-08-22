@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
+#define kLogIsOn 1
+#define kSearchCompletedNotification @"SearchCompletedNotification"
+
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
@@ -17,6 +21,12 @@
 
 - (void)saveContext;
 
-
+@property BOOL searchIsAborted;
+@property (nonatomic, strong) NSString* searchIsAbortedMessage;
+@property (nonatomic, strong) NSDictionary* searchResultSet;
+@property (nonatomic, strong) NSDictionary* searchResultSetItemDict;
+@property BOOL searchIsLoadedFromCache;
+@property (nonatomic, strong) UIImage* searchPlaceholderImage60x60;
+@property (nonatomic, strong) UIImage* searchPlaceholderImage100x100;
 @end
 
