@@ -170,6 +170,36 @@
         XCTAssertNil([_gCache getSearchForStoreString:storeURLString]);
 }
 
+#pragma mark - Remote Access
+- (void)todoCanDownloadNonSSLImages {
+    // TO DO
+}
+
+- (void)todoInvalidImageURLsNonBlocking {
+    // TO DO
+}
+
+
+#pragma mark - Bundle Resources
+- (void)todoDataSourceExistsEntityPlist {
+    // TO DO
+}
+
+- (void)todoDataSourceIsValidEntityPlist {
+    // TO DO
+}
+
+- (void)todoSearchPageHTMLExists {
+    // TO DO
+}
+
+- (void)todoPlaceholderImagesExist {
+    // TO DO
+}
+
+
+
+
 #pragma mark - Performance Tests
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
