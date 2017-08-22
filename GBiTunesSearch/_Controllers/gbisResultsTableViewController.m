@@ -119,12 +119,14 @@ typedef NS_ENUM(NSInteger, UYLWorldFactsSearchScope)
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if (kLogIsOn) NSLog(@"resultsTVC %@: \nsender: %@", NSStringFromSelector(_cmd), sender);
+    if (kLogIsOn) NSLog(@"resultsTVC %@: \ndest: %@", NSStringFromSelector(_cmd), [segue destinationViewController]);
     
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     
     if ([[segue identifier] isEqualToString:@"segResultCelToDetail"]) {
         _appDelegate.searchResultSetItemDict = ((gbisResultsCell*)sender).resultSetItemDict;
+        
         //((gbisDetailViewController*)[segue destinationViewController]).resultSetItemDict = ((gbisResultsCell*)sender).resultSetItemDict;
     }
 }

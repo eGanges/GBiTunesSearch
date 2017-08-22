@@ -17,8 +17,8 @@
 @property (weak, nonatomic) gbisCache* searchCache;
 @end
 
-#define kAppStoreLinkUniversal              @"https://itunes.apple.com/search?term=%@&entity=%@&limit=5"
-#define kAppStoreLinkCountrySpecific        @"https://itunes.apple.com/search?term=%@&entity=%@&country=%@&limit=5"
+#define kAppStoreLinkUniversal              @"https://itunes.apple.com/search?term=%@&entity=%@"
+#define kAppStoreLinkCountrySpecific        @"https://itunes.apple.com/search?term=%@&entity=%@&country=%@"
 
 static id sharedInstance = nil;
 @implementation gbisRetriever

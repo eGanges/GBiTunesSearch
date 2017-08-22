@@ -119,6 +119,17 @@
     UIViewController *sourceViewController = sender.sourceViewController;
     // Pull any data from the view controller which initiated the unwind segue.
 }
+
+- (IBAction)doneButtonClicked:(id)sender
+{
+    if (kLogIsOn) NSLog(@"detailVC %@: %@, \nnavCon:%@", NSStringFromSelector(_cmd), sender, self.navigationController);
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+
+
 /*
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation

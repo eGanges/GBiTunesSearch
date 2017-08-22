@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-#define kLogIsOn 1
+#define kLogIsOn 0
 #define kSearchCompletedNotification @"SearchCompletedNotification"
 
 
